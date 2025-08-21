@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is the capital of France?",
+    "options": ["Paris", "London", "Rome", "Berlin"],
+    "answer_index": 0
+  },
+  {
+    "question": "Evaluate the integral: $$ \\int_0^1 x^2 dx $$",
+    "options": ["1/2", "1/3", "2/3", "1"],
+    "answer_index": 1
+  },
+  {
+    "question": "What is the capital of Bangladesh?",
+    "options": ["Delhi", "London", "Dhaka", "New york"],
+    "answer_index": 2
+  },
+  {
+    "question": "Who is the number 1 richest person in the world?",
+    "options": ["Mark Zuckerberg", "Elon Musk", "Jeff Bezos", " Bill Gates"],
+    "answer_index": 1
+  },
+  {
+    "question": "Who is the number 1 richest person in the world?",
+    "options": ["Mark Zuckerberg", "Elon Musk", "Jeff Bezos", " Bill Gates"],
+    "answer_index": 1
+  },
+  {
+    "question": "Which programming language is primarily used for developing Flutter applications?",
+    "options": ["Java", "Kotlin", "Dart", "Swift"],
+    "answer_index": 2
+  },
+  {
+    "question": "In Flutter, what are the fundamental building blocks of the user interface?",
+    "options": ["Classes", "Functions", "Widgets", "Packages"],
+    "answer_index": 2
+  },
+  {
+    "question": "Which type of widget is immutable and its properties cannot change?",
+    "options": ["StatefulWidget", "DynamicWidget", "MutableWidget", "StatelessWidget"],
+    "answer_index": 3
+  },
+  {
+    "question": "In which method of a widget class is the UI layout built and returned?",
+    "options": ["initState()", "createState()", "build()", "runApp()"],
+    "answer_index": 2
+  },
+  {
+    "question": "Which widget would you use to capture text input from a user?",
+    "options": ["TextField", "TextButton", "Text", "InputBox"],
+    "answer_index": 1
+  }
+]
