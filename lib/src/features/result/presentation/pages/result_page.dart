@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_assesment/src/core/routes/routes_name.dart';
 import 'package:quiz_assesment/src/core/services/local_storage_service.dart';
+import 'package:quiz_assesment/src/core/utils/show_snackbar.dart';
 
 class ResultPage extends StatefulWidget {
   final int score;
@@ -31,23 +32,28 @@ class _ResultPageState extends State<ResultPage> {
             TextField(
               controller: _nameController,
               decoration: const InputDecoration(
-                labelText: "Enter your name",
+                hintText: "Enter your name",
                 border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
               onPressed: ()async{
-                final storage = LocalStorageService.instance;
-                List<dynamic> leaderboard = storage.getData("leaderboard") ?? [];
+                if(_nameController.text.isNotEmpty){
+                  final storage = LocalStorageService.instance;
+                  List<dynamic> leaderboard = storage.getData("leaderboard") ?? [];
 
-                leaderboard.add({
-                  "name": _nameController.text,
-                  "score": widget.score,
-                });
+                  leaderboard.add({
+                    "name": _nameController.text,
+                    "score": widget.score,
+                  });
 
-                await storage.saveData("leaderboard", leaderboard);
-                Navigator.pushNamedAndRemoveUntil(context, RoutesName.homePage, (_)=>false);
+                  await storage.saveData("leaderboard", leaderboard);
+                  Navigator.pushNamedAndRemoveUntil(context, RoutesName.homePage, (_)=>false);
+                }else{
+                  showSnackBar(context, "Please Enter your name");
+                }
+
 
               },
               child: Text("Save Score",style: TextStyle(

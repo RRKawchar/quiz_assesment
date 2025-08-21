@@ -24,18 +24,7 @@ class AppTheme{
             color: Colors.black,
         ),
       ),
-      appBarTheme: AppBarTheme(
-        backgroundColor: kBgColor,
-        elevation: 0,
-        titleTextStyle: TextStyle(
-          fontSize: 18,
-          color: Colors.black,
-        ),
-        centerTitle: true,
-        iconTheme: IconThemeData(
-          color: Colors.black
-        )
-      ),
+      appBarTheme: _appBarTheme(),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           shape:RoundedRectangleBorder(
@@ -52,3 +41,20 @@ class AppTheme{
     );
   }
 }
+
+
+  AppBarTheme _appBarTheme(){
+  return AppBarTheme(
+      backgroundColor: kBgColor,
+      elevation: 0,
+      titleTextStyle: TextStyle(
+        fontSize: 18,
+        color: Colors.black,
+      ),
+      centerTitle: true,
+      iconTheme: IconThemeData(
+          color: Colors.black
+      ),
+     actionsPadding: EdgeInsets.only(right: 10)
+  );
+  }

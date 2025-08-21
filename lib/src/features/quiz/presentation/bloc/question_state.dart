@@ -16,7 +16,7 @@ class GetAllQuestionState extends QuestionState{
     required this.questions,
      this.currentIndex=0,
      this.selectedIndex,
-     this.score=0
+     this.score=0,
    });
 
 
@@ -25,6 +25,7 @@ class GetAllQuestionState extends QuestionState{
      int? currentIndex,
      int? selectedIndex,
      int? score,
+     int? remainingSeconds,
    }) {
      return GetAllQuestionState(
        questions: questions ?? this.questions,

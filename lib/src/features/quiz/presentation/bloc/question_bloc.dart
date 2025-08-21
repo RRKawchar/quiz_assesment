@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quiz_assesment/src/features/quiz/domain/repositories/question_repository.dart';
 import 'package:quiz_assesment/src/features/quiz/domain/usecases/get_question_usecase.dart';
@@ -16,7 +18,10 @@ class QuestionBloc extends Bloc<QuestionEvent,QuestionState>{
    emit(QuestionLoadingState());
     try{
      final questions= await useCase.call();
-       emit(GetAllQuestionState(questions: questions));
+       emit(GetAllQuestionState(
+           questions: questions,
+           currentIndex: 0,
+       ));
     }catch(e){
        emit(QuestionErrorState(e.toString()));
     }
@@ -58,5 +63,6 @@ class QuestionBloc extends Bloc<QuestionEvent,QuestionState>{
       }
     }
   }
+
 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quiz_assesment/src/core/utils/show_snackbar.dart';
 import 'package:quiz_assesment/src/features/leaderboard/presentation/bloc/leaderboard_bloc.dart';
 import 'package:quiz_assesment/src/features/leaderboard/presentation/bloc/leaderboard_event.dart';
 import '../bloc/leaderboard_state.dart';
@@ -26,9 +27,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
       body:BlocConsumer<LeaderboardBloc,LeaderboardState>(
           listener: (context,state){
             if(state is LeaderboardErrorState){
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(state.message)),
-              );
+              showSnackBar(context, state.message);
             }
           },
           builder: (context,state){

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quiz_assesment/src/core/di/init_dependency.main.dart';
+import 'package:quiz_assesment/src/core/di/init_dependency.dart';
 import 'package:quiz_assesment/src/core/routes/app_routes.dart';
 import 'package:quiz_assesment/src/core/theme/app_theme.dart';
 import 'package:quiz_assesment/src/features/home/presentation/pages/home_page.dart';
