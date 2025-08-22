@@ -34,12 +34,6 @@
    <img width="413" height="794" alt="image" src="https://github.com/user-attachments/assets/8fc4e862-7c85-4d42-8093-bc4e52b2a256" />
 
  ## Features Images
+
+   <img width="1366" height="768" alt="Untitled design" src="https://github.com/user-attachments/assets/ac5efd7d-a9ac-4fb6-b5e5-bc4d6ea0700e" />
  
-
-    
-
-   
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
