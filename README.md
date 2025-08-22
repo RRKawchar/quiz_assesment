@@ -1,13 +1,16 @@
-# quiz_assesment
-
-A new Flutter project.
+# quiz assesment
 
 ## Getting Started
+Flutter sdk : 3.32.5
+## Setup Steps
+ 1. [Clone the repository](https://github.com/RRKawchar/quiz_assesment.git)
+ 2. flutter pub get   
+ 3. flutter run
+ 4. flutter test (Optional)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
+## Dependencies
+  1. Latex Text support || [flutter_tex: ^5.1.10](https://pub.dev/packages/flutter_tex)
+    
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
