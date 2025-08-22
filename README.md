@@ -6,11 +6,11 @@
 ## Setup Steps
   ### Clone the repository
   git clone https://github.com/RRKawchar/quiz_assesment.git
-  # Install dependencies
+  ### Install dependencies
   flutter pub get
-  # Run the app
+  ### Run the app
   flutter run
-  # Run tests (optional)
+  ### Run tests (optional)
   flutter test
 
 ## Dependencies
