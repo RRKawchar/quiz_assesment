@@ -14,13 +14,13 @@
   flutter test
 
 ## Dependencies
-  LaTeX Support → [flutter_tex: ^5.1.10](https://pub.dev/packages/flutter_tex)
-  Boilerplate Code Generation → [build_runner](https://pub.dev/packages/build_runner)
-  JSON Serialization → [json_serializable: ^6.10.0](https://pub.dev/packages/json_serializable)
-  State Management → [flutter_bloc: ^9.1.1](https://pub.dev/packages/flutter_bloc)
-  Value Equality → [equatable: ^2.0.7](https://pub.dev/packages/equatable)
-  Dependency Injection → [get_it: ^8.2.0](https://pub.dev/packages/get_it)
-  Local Storage → [hive: ^2.2.3](https://pub.dev/packages/hive)
+  1. LaTeX Support → [flutter_tex: ^5.1.10](https://pub.dev/packages/flutter_tex)
+  2. Boilerplate Code Generation → [build_runner](https://pub.dev/packages/build_runner)
+  3. JSON Serialization → [json_serializable: ^6.10.0](https://pub.dev/packages/json_serializable)
+  4. State Management → [flutter_bloc: ^9.1.1](https://pub.dev/packages/flutter_bloc)
+  5. Value Equality → [equatable: ^2.0.7](https://pub.dev/packages/equatable)
+  6. Dependency Injection → [get_it: ^8.2.0](https://pub.dev/packages/get_it)
+  7. Local Storage → [hive: ^2.2.3](https://pub.dev/packages/hive)
 
  ## CI/CD Github
    1. Workflow file: .github/workflows/main.yml
