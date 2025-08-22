@@ -14,7 +14,17 @@ Flutter sdk : 3.32.5
   3. Json serialization || [json_serializable: ^6.10.0](https://pub.dev/packages/json_serializable)
   4. Statemanagement || [flutter_bloc: ^9.1.1](https://pub.dev/packages/flutter_bloc)
   5. object comparison by automatically implementing == and hashCode based on property values || [equatable: ^2.0.7](https://pub.dev/packages/equatable)
+  6. Dependency Injection || [get_it: ^8.2.0](https://pub.dev/packages/get_it)
+
  
+ ## Local Storage
+   Hive || [hive: ^2.2.3](https://pub.dev/packages/hive)
+
+ ## Project Structure 
+   Clean Architecture 
+   Features first folder structure
+   data layer, domain layer, presentation layer
+   
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
