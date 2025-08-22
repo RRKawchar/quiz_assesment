@@ -1,8 +1,8 @@
 # quiz assesment
 
 ## Getting Started
-Flutter sdk : 3.32.5
-APK → [download](https://github.com/RRKawchar/quiz_assesment/releases/download/v1.0.10/app-arm64-v8a-release.apk)
+*Flutter sdk : 3.32.5
+*APK → [download](https://github.com/RRKawchar/quiz_assesment/releases/download/v1.0.10/app-arm64-v8a-release.apk)
 ## Setup Steps
   # Clone the repository
   git clone https://github.com/RRKawchar/quiz_assesment.git
