@@ -53,7 +53,8 @@ class _LeaderboardPageState extends State<LeaderboardPage> {
             }
           },
 
-          ));
+          ),
+    );
 
 
 

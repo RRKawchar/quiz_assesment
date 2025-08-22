@@ -1,32 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_assesment/src/core/routes/routes_name.dart';
 
-class HomePage extends StatelessWidget {
+import '../../../../core/services/responsive.dart';
+
+
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
   Widget build(BuildContext context) {
+    final responsive = Responsive(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text("RobizCode Quiz"),
+        title: Text("RobizCode Quiz",
+          style: TextStyle(fontSize: responsive.scaleText(20)),),
       ),
 
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(responsive.scaleWidth(24)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(),
-            const SizedBox(height: 24),
             FilledButton(
               onPressed: () => Navigator.pushNamed(context, RoutesName.quizPage),
-              child: const Text('Start Quiz'),
+              child: Text('Start Quiz',
+                style: TextStyle(fontSize: responsive.scaleText(16)),),
             ),
-            const SizedBox(height: 12),
+            SizedBox(height: responsive.scaleHeight(12)),
             OutlinedButton(
               onPressed: () => Navigator.pushNamed(context, RoutesName.leaderBoard),
-              child: const Text('Leaderboard'),
+              child: Text('Leaderboard',
+                style: TextStyle(fontSize: responsive.scaleText(16)),),
             ),
           ],
         ),

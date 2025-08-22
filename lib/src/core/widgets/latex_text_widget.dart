@@ -3,9 +3,8 @@ import 'package:flutter_tex/flutter_tex.dart';
 
 class LatexTextWidget extends StatelessWidget {
   final String text;
-  final TextStyle? style;
-  final TextAlign? align;
-  const LatexTextWidget(this.text, {super.key, this.style, this.align});
+
+  const LatexTextWidget(this.text, {super.key,});
 
   @override
   Widget build(BuildContext context) {

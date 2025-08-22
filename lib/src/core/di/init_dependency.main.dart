@@ -6,7 +6,7 @@ final getIt=GetIt.instance;
 Future<void> initDependency()async{
 
   await TeXRenderingServer.start();
- await LocalStorageService.instance.initBox();
+  await LocalStorageService.instance.initBox();
 
 _questionInit();
 _leaderboardInit();

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tex/flutter_tex.dart';
 import 'package:quiz_assesment/src/core/theme/app_color.dart';
 
 class AppTheme{
@@ -24,7 +23,7 @@ class AppTheme{
             color: Colors.black,
         ),
       ),
-      appBarTheme: _appBarTheme(),
+      appBarTheme: _appBarTheme(isDark: true),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           shape:RoundedRectangleBorder(
@@ -40,10 +39,11 @@ class AppTheme{
       )
     );
   }
+
 }
 
 
-  AppBarTheme _appBarTheme(){
+  AppBarTheme _appBarTheme({required bool isDark}){
   return AppBarTheme(
       backgroundColor: kBgColor,
       elevation: 0,

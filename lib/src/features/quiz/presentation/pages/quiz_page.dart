@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quiz_assesment/src/core/routes/routes_name.dart';
@@ -9,6 +8,7 @@ import 'package:quiz_assesment/src/features/quiz/presentation/bloc/question_stat
 import 'package:quiz_assesment/src/features/quiz/presentation/widgets/option_list_widget.dart';
 import 'package:quiz_assesment/src/features/quiz/presentation/widgets/progressbar_widget.dart';
 import 'package:quiz_assesment/src/features/quiz/presentation/widgets/question_next_btn.dart';
+import '../../../../core/services/responsive.dart';
 import '../../../../core/utils/show_snackbar.dart';
 import '../bloc/question_event.dart';
 
@@ -58,15 +58,16 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
+    final responsive = Responsive(context);
     return Scaffold(
-      appBar: AppBar(title: const Text("Quiz Page"),
+      appBar: AppBar(title: Text("Quiz Page",style: TextStyle(fontSize: responsive.scaleText(20)),),
       actions: [
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: Text(
             "$_remainingTime s",
-            style: const TextStyle(
-                fontSize: 18, fontWeight: FontWeight.bold, color: Colors.red),
+            style: TextStyle(
+                fontSize: responsive.scaleText(20), fontWeight: FontWeight.bold, color: Colors.red),
           ),
         ),
       ],
@@ -100,28 +101,45 @@ class _QuizPageState extends State<QuizPage> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 20),
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 400),
+                      transitionBuilder: (child,animation){
+                        final offsetAnim=Tween<Offset>(
+                          begin: Offset(0, 1),
+                          end: Offset.zero
+                        ).animate(animation);
+                        return SlideTransition(
+                            position: offsetAnim,
+                            child: FadeTransition(
+                                opacity: animation,
+                                 child: child,
+                            ),
+                        );
+                      },
+                      child: Column(
+                        key: ValueKey(state.currentIndex),
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 20),
 
-                        // Question text
-                        LatexTextWidget(
-                          "${state.currentIndex + 1}. ${state.questions[state.currentIndex].question}",
-                        ),
+                          // Question text
+                          LatexTextWidget(
+                            "${state.currentIndex + 1}. ${state.questions[state.currentIndex].question}"
+                          ),
 
-                        const SizedBox(height: 20),
+                          const SizedBox(height: 20),
 
-                        /// Options
-                        OptionListWidget(
+                          /// Options
+                          OptionListWidget(
                             options: state.questions[state.currentIndex].options,
                             selectedIndex: state.selectedIndex,
-                          onOptionSelected: (i) {
-                            context.read<QuestionBloc>().add(SelectedAnswer(i));
-                          },
-                        ),
-                      ],
-                    ),
+                            onOptionSelected: (i) {
+                              context.read<QuestionBloc>().add(SelectedAnswer(i));
+                            },
+                          ),
+                        ],
+                      ),
+                    )
                   ),
                 ),
                 QuestionNextBtn(
