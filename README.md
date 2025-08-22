@@ -21,9 +21,11 @@ Flutter sdk : 3.32.5
    Hive || [hive: ^2.2.3](https://pub.dev/packages/hive)
 
  ## Project Structure 
-   Clean Architecture 
-   Features first folder structure
-   data layer, domain layer, presentation layer
+   1. Clean Architecture 
+   2. Features first folder structure
+   3. data layer, domain layer, presentation layer
+   4. <img width="413" height="794" alt="image" src="https://github.com/user-attachments/assets/8fc4e862-7c85-4d42-8093-bc4e52b2a256" />
+
    
 
 For help getting started with Flutter development, view the
