@@ -10,9 +10,11 @@ Flutter sdk : 3.32.5
 
 ## Dependencies
   1. Latex Text support || [flutter_tex: ^5.1.10](https://pub.dev/packages/flutter_tex)
-    
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+  2. Auto generated boilerplat Code || [build_runner](https://pub.dev/packages/build_runner)
+  3. Json serialization || [json_serializable: ^6.10.0](https://pub.dev/packages/json_serializable)
+  4. Statemanagement || [flutter_bloc: ^9.1.1](https://pub.dev/packages/flutter_bloc)
+  5. object comparison by automatically implementing == and hashCode based on property values || [equatable: ^2.0.7](https://pub.dev/packages/equatable)
+ 
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
